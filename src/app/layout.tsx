@@ -16,7 +16,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <nav>
+          <ul className="list-inside">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/todos"> Todo</a>
+            </li>
+            <li>
+              <a href="/counter"> Counter</a>
+            </li>
+          </ul>
+        </nav>
+        {children}
+      </body>
     </html>
   );
 }
